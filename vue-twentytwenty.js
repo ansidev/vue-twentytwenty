@@ -9,7 +9,7 @@ export default {
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-  Vue.use( {
+  window.Vue.use({
     install
   })
 }

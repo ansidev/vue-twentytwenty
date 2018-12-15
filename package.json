@@ -13,10 +13,16 @@
     "src"
   ],
   "devDependencies": {
-    "vue-cli": "^2.8.1"
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "vue-template-compiler": "^2.5.21"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/vue build demo/Demo.vue",
-    "build": "./node_modules/.bin/vue build vue-twentytwenty.js --lib TwentyTwenty --prod"
+    "dev": "vue-cli-service serve demo/main.js",
+    "build": "vue-cli-service build --target lib --name vue-twentytwenty vue-twentytwenty.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.21"
   }
 }
